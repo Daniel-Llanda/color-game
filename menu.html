@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MENU</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		* {
+		    padding: 0;
+		    margin: 0;
+		    box-sizing: border-box;
+		    font-family: monospace;
+		}
+		body {
+		    width: 100%;
+		    height: 100vh;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    background-color: lightskyblue;
+		    animation: transition 0.75s;
+		}
+		@keyframes transition{
+			from{
+				opacity: 0;
+				transform: rotateY(10deg);
+			}
+			to{
+				opacity: 1;
+				transform: rotateY(0deg);
+			}
+		}
+		main{
+		    height: 100%;
+		    width: 100%;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    justify-content: center;
+		    gap: 2rem;
+		}
+		.back{
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    margin-left: 1rem;
+		    margin-top: 1rem;
+		}
+		a .fa-arrow-left{
+
+		}
+		button{
+			background-color: rgb(248, 206, 151);
+		    font-size: 25pt;
+		    font-weight: bold;
+		    width: 25vw;
+		    padding: 10px 20px;
+		    border: 2px solid black;
+		    border-radius: 10px;
+		    cursor: pointer;
+		    border: 2px solid black;
+		    box-shadow: -5px 5px black;
+		    
+		}
+		button:hover {
+		  box-shadow: none;
+		  transform: translate(-5px, 5px);
+		  background-color: lightgray;
+		}
+		@media screen and (max-width: 768px) {
+		    button{
+			    font-size: 20pt;
+			    width: 30vw;
+			}
+		}
+		@media screen and (max-width: 425px) {
+		    button{
+			    font-size: 15pt;
+			    width: 40vw;
+			}
+		}
+		@media screen and (max-width: 320px) {
+		    button{
+			    width: 50vw;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="back">
+            <a href="index.html"><i class="fa fa-arrow-left" style="font-size: 40px;"></i></a>
+        </div>
+        <a href="solo/index.html"><button>SOLO</button></a>
+        <a href="multiplayer/index.html"><button>MULTIPLAYER</button></a>
+        <a href="instruction/index.html"><button>INSTRUCTION</button></a>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PLAY</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<style type="text/css">
+		* {
+		    padding: 0;
+		    margin: 0;
+		    box-sizing: border-box;
+		    font-family: monospace;
+		}
+		body {
+		    width: 100%;
+		    height: 100vh;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    background-color: lightskyblue;
+		    animation: transition 0.75s;
+		}
+		@keyframes transition{
+			from{
+				opacity: 0;
+				transform: rotateY(10deg);
+			}
+			to{
+				opacity: 1;
+				transform: rotateY(0deg);
+			}
+		}
+		main{
+		    height: 100%;
+		    width: 100%;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    justify-content: center;
+		}
+		h1{
+			font-size: 50pt;
+			position: relative;
+			display: inline-block;
+		}
+	
+		h1 span:nth-child(1){
+			animation: animate 6s infinite alternate;
+		}
+		h1 span:nth-child(2){
+			animation: animate 6s infinite alternate;
+		}
+		h1 span:nth-child(3){
+			animation: animate 6s infinite alternate;
+		}
+		h1 span:nth-child(4){
+			animation: animate 6s infinite alternate;
+		}
+		h1 span:nth-child(5){
+			animation: animate 6s infinite alternate;
+		}
+		h1 span:nth-child(6){
+			color: black;
+		}
+		h1 span:nth-child(7){
+			color: black;
+		}
+		h1 span:nth-child(8){
+			color: black;
+		}
+		h1 span:nth-child(9){
+			color: black;
+		}
+		@keyframes animate{
+			0%{
+				color: green;
+			}
+			20%{
+				color: yellow;
+			}
+			40%{
+				color: white;
+			}
+			60%{
+				color: red;
+			}
+			80%{
+				color: pink;
+			}
+			100%{
+				color: blue;
+			}
+
+		}
+		button{
+			background-color: rgb(248, 206, 151);
+		    font-size: 25px;
+		    font-weight: bold;
+		    width: 13rem;
+		    padding: 10px 20px;
+		    border: 2px solid black;
+		    border-radius: 10px;
+		    cursor: pointer;
+		    padding: 10px 20px;;
+		    border: 2px solid black;
+		    box-shadow: -5px 5px black;
+		}
+		button:hover {
+		  box-shadow: none;
+		  transform: translate(-5px, 5px);
+		  background-color: lightgray;
+		}
+		@media screen and (max-width: 425px) {
+		    h1{
+	   			font-size: 30pt;
+	   		}
+		}
+		@media screen and (max-width: 375px) {
+		    h1{
+	   			font-size: 20pt;
+	   		}
+	   		button{
+			    font-size: 15px;
+			    font-weight: bold;
+			    width: 9rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+        <h1>
+        	<span>C</span>
+        	<span>O</span>
+        	<span>L</span>
+        	<span>O</span>
+        	<span>R</span>
+        	<span>G</span>
+        	<span>A</span>
+        	<span>M</span>
+			<span>E</span>
+        </h1>
+        <br>
+        <br>
+        <a href="menu.html"><button>PLAY NOW</button></a>
+    </main>
+
+</body>
+</html>

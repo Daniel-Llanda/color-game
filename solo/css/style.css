@@ -1,0 +1,361 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+    animation: transition 0.75s;
+}
+@keyframes transition{
+    from{
+        opacity: 0;
+        transform: rotateY(10deg);
+    }
+     to{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 2rem;
+}
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.money-container {
+    width: 80%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.money-cash-bet{
+    background-color: rgb(248, 206, 151);
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 15pt;
+}
+.color-container {
+    background-color: rgb(248, 206, 151);
+    width: 50%;
+    height: 28vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.color-holder{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.color1,.color2,.color3 {
+    height: 20vh;
+    width: 10vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+.bet-container {
+    background-color: rgb(248, 206, 151);
+    width: 60%;
+    height: 20vh;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.bet-holder{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.bet-color-name{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.bet-color-name label{
+    margin-top: 1rem;
+    font-size: 12pt;
+}
+.bet1,.bet2,.bet3,.bet4,.bet5,.bet6 {
+    height: 10vh;
+    width: 5vw;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bet1{
+    background-color: green;
+}
+.bet2{
+    background-color: yellow;
+}
+.bet3{
+    background-color: white;
+}
+.bet4{
+    background-color: red;
+}
+.bet5{
+    background-color: pink;
+}
+.bet6{
+    background-color: blue;
+}
+input[type="checkbox"]{
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    background-color: #141728;
+    cursor: pointer;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+input[type="checkbox"]:checked{
+    background: #141728;
+    color: white;
+}
+input[type="checkbox"]:after {
+  content: ' ';
+  position: relative;
+  left: 40%;
+  top: 20%;
+  width: 15%;
+  height: 40%;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(50deg);
+  display: none;
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
+}
+.bet-money {
+    background-color: rgb(248, 206, 151);
+    width: 25%;
+    height: 13vh;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.money-holder{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+.betBtn{
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input{
+    height: 100%;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 15pt;
+}
+.btn-container {
+    width: 60%;
+    height: 10vh;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.btn-holder{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn-holder button{
+    font-size: 25px;
+    font-weight: bold;
+    width: 13rem;
+    padding: 5px;
+    margin: 0 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-holder button:hover {
+    background-color: lightgray;
+}
+@media screen and (max-width: 768px) {
+    main{
+        grid-gap: 1rem;
+    }
+    .color-container {
+        height: 17vh;
+    }
+    .color1,.color2,.color3 {
+        height: 12vh;
+        width: 10vw;
+    }
+    .bet-container {
+        width: 60%;
+        height: 40vh;
+        padding: 15px;
+    }
+    .bet-holder{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .bet1,.bet2,.bet3,.bet4,.bet5,.bet6 {
+        height: 10vh;
+        width: 10vw;
+    }
+    .bet-money {
+        width: 40%;
+        height: 13vh;
+    }
+}
+@media screen and (max-width: 425px) {
+    .color-container {
+        height: 10vh;
+    }
+    .color1,.color2,.color3 {
+        height: 6vh;
+        width: 9vw;
+    }
+    .bet-container {
+        width: 70%;
+        height: 30vh;
+        padding: 15px;
+    }
+    .bet-holder{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .bet1,.bet2,.bet3,.bet4,.bet5,.bet6 {
+        height: 8vh;
+        width: 14vw;
+    }
+    .bet-money {
+        width: 60%;
+        height: 13vh;
+    }
+    input{
+        font-size: 12pt;
+    }
+}
+@media screen and (max-width: 375px) {
+    input[type="checkbox"]{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .bet-container {
+        width: 70%;
+        height: 30vh;
+        padding: 15px;
+    }
+    .bet-holder{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .bet1,.bet2,.bet3,.bet4,.bet5,.bet6 {
+        width: 15vw;
+    }
+    .bet-money {
+        width: 70%;
+        height: 13vh;
+    }
+    .btn-container {
+        width: 60%;
+        height: 15vh;
+    }
+    .btn-holder{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 375px) {
+    .bet-container {
+        width: 80%;
+        padding: 10px;
+    }
+    .bet1,.bet2,.bet3,.bet4,.bet5,.bet6 {
+        width: 17vw;
+    }
+    .bet-money {
+        width: 70%;
+        height: 13vh;
+    }
+    .btn-container {
+        width: 60%;
+        height: 15vh;
+    }
+    .btn-holder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .btn-holder button{
+        width: 9rem;
+    }
+}
+@media screen and (max-width: 375px) {
+    .money-cash-bet{
+        font-size: 10pt;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main>
+        <div class="back">
+            <a href="../menu.html"><i class="fa fa-arrow-left" style="font-size: 40px;"></i></a>
+        </div>
+        <div class="money-container">
+            <div class="money-cash-bet">
+                <p class="money moneyCount">MONEY: 500</p>
+            </div>
+            <div class="money-cash-bet">
+                <label class="money">YOUR TOTAL BET: </label>
+                <p class="betAmount"></p>
+            </div>
+        </div>
+        
+        <div class="color-container">
+            <div class="color-holder">
+                <div class="color1"></div>
+                <div class="color2"></div>
+                <div class="color3"></div>
+            </div>
+        </div>
+        <div class="bet-container">
+            <div class="bet-holder">
+                <div class="bet-color-name">
+                    <div class="bet1">
+                        <input type="checkbox" id="green" oninput="chooseColor()" class="checkbox" disabled>
+                    </div>
+                    <label>GREEN</label>
+                </div>
+                <div class="bet-color-name">
+                    <div class="bet2">
+                        <input type="checkbox" id="yellow" oninput="chooseColor()" class="checkbox" disabled>
+                    </div>
+                    <label>YELLOW</label>
+                </div>
+                <div class="bet-color-name">
+                    <div class="bet3">
+                        <input type="checkbox" id="white" oninput="chooseColor()" class="checkbox" disabled>
+                    </div>
+                    <label>WHITE</label>
+                </div>
+                <div class="bet-color-name">
+                    <div class="bet4">
+                        <input type="checkbox" id="red" oninput="chooseColor()" class="checkbox" disabled>
+                    </div>
+                    <label>RED</label>
+                </div>
+                <div class="bet-color-name">
+                    <div class="bet5">
+                        <input type="checkbox" id="pink" oninput="chooseColor()" class="checkbox" disabled>
+                    </div>
+                    <label>PINK</label>
+                </div>
+                <div class="bet-color-name">
+                    <div class="bet6">
+                        <input type="checkbox" id="blue" oninput="chooseColor()" class="checkbox" disabled>
+                    </div>
+                    <label>BLUE</label>
+                </div>
+            </div>
+        </div>
+        <div class="bet-money">
+            <div class="money-holder">
+                <input type="number" name="" id="inputBet" placeholder="ENTER YOU BET" oninput="enableChoices()" autocomplete="off">
+                <button id="submitBet" class="betBtn" disabled>SUBMIT BET</button>
+            </div>
+        </div>
+        <div class="btn-container">
+            <div class="btn-holder">
+                <button id="rollBtn" disabled>ROLL</button>
+                <button id="restartBtn" disabled>RESTART</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

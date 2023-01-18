@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+    animation: transition 0.75s;
+}
+@keyframes transition{
+    from{
+        opacity: 0;
+        transform: rotateY(10deg);
+    }
+     to{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.colorContainer {
+    background-color: rgb(248, 206, 151);
+    width: 50%;
+    height: 40vh;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.color-holder{
+    margin-top: 2.5rem;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.color1,.color2,.color3 {
+    height: 20vh;
+    width: 10vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+.buttonContainer{
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonContainer button {
+    font-size: 25px;
+    font-weight: bold;
+    width: 13rem;
+    padding: 5px;
+    margin: 0 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.buttonContainer button:hover {
+    background-color: lightgray;
+}
+@media screen and (max-width: 1024px) {
+    .color-holder{
+        margin-top: 3.5rem;
+    }
+  .color1,.color2,.color3 {
+    height: 15vh; 
+}
+@media screen and (max-width: 768px) {
+    .color-holder{
+        margin-top: 4.5rem;
+    }
+  .color1,.color2,.color3 {
+    height: 10vh; 
+}
+@media screen and (max-width: 425px) {
+    .colorContainer {
+        height: 50vh;
+    }
+    .color-holder{
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .color1,.color2,.color3 {
+        height: 10vh;
+        width: 25vw;
+    }
+}
